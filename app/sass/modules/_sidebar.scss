@@ -1,0 +1,118 @@
+.sidebar {
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding: 39px 20px;
+  background-image: linear-gradient(to bottom, #27B983 55%, #91E857  100%);
+
+  @media only screen and (min-width : 580px){
+    width: 240px;
+  }
+
+  .avatar {
+    width: 100%;
+    @extend .clearfix;
+
+    .photo {
+      width: 45px;
+      height: 45px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .name {
+      color: #fff;
+      @include fontSize(14px);
+      padding-top: 10px;
+    }
+
+    .prev-next {
+      width: 6px;
+      height: 6px;
+      fill: #1CAF5E;
+      margin-left: 5px;
+    }
+
+    .followers {
+      color: rgba(0, 0, 0, 0.3);
+      @include fontSize(12px);
+      font-weight: 700;
+      padding-top: 3px;
+    }
+  }
+
+  .menu {
+    width: 100%;
+    margin-top: 39px;
+
+    .item {
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    .js-active-menu-item {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+    
+    a {
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      @include fontSize(14px);
+      color: #fff;
+      padding: 5px 20px;
+    }
+    
+    .icon {
+      fill: #fff;
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
+    }
+  }
+
+  .menu-bottom {
+    width: 100%;
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 7px 10px 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 20px);
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    .item {
+      text-align: center;
+      margin: 15px 12px 0;
+    }
+
+    a {
+      @include fontSize(12px);
+      color: #147A42;
+      transition: 0.1s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .js-active-link-menu-bottom {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.content {
+  width: 100%;
+  background-color: #eff7ed;
+  padding: 68px 15px 130px;
+
+  @media only screen and (min-width : 580px){
+    width: calc(100% - 240px);
+  }
+
+  .wrap {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .username {
+    @include fontSize(24px);
+    font-weight: 700;
+    color: $main-color;
+    margin-bottom: 15px;
+  }
+
+  .term {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 37px;
+
+    .item {
+      display: inline-block;
+    }
+
+    .item + .item {
+      margin-left: 33px;
+    }
+
+    a {
+      position: relative;
+      color: #333;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background-color: #B8E986;
+        transition: 0.1s;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+
+    .js-active-link-term {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    @media only screen and (min-width : 1100px){
+      margin-left: -25px;
+      margin-right: -25px;
+    }
+
+    .item {
+      flex: 200px 1 1;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @media only screen and (min-width : 992px){
+        flex: 25% 1 1;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          /* стили только для IE10 IE11 */
+          flex: 200px 1 1;
+        }
+      }
+
+      @media only screen and (min-width : 1100px){
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      .social {
+        width: 20px;
+        height: 20px;
+
+        .icon {
+          width: 100%;
+          height: 100%;
+          fill: #fff;
+        }
+      }
+
+      .counter {
+        .number {
+          height: 41px;
+          margin-top: 39px;
+
+          .icon {
+            width: 78px;
+          }
+        }
+
+        .text {
+          height: 9px;
+
+          .icon {
+            width: 68px;
+          }
+
+          .LOOPS {
+            width: 36px;
+          }
+        }
+
+        .icon {
+          height: 100%;
+          fill: #fff;
+        }
+      }
+
+      .rating {
+        position: absolute;
+        bottom: 11px;
+        right: 11px;
+        @include fontSize(26px);
+        color: #fff;
+
+        .icon {
+          width: 7px;
+          height: 12px;
+          margin-bottom: 2px;
+          fill: rgba(255,255,255,0.5);
+        }
+      }
+
+      .avatar {
+        @extend .clearfix;
+        color: #333;
+        @include fontSize(13px);
+
+        .photo {
+          float: left;
+          width: 35px;
+          height: 35px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+
+        .social-page {
+          opacity: 0.5;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .item-content {
+      position: relative;
+      width: 100%;
+      min-height: 200px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 20px 22px 11px 20px;
+    }
+
+    .item1 .item-content {
+      background-image: linear-gradient(to bottom, #39579A 0%, #2C4479 100%);
+    }
+    .item2 .item-content {
+      background-image: linear-gradient(to bottom, #059FF5 0%, #059FC3 100%);
+
+      .rating {
+        @extend .minus;
+      }
+    }
+    .item3 .item-content {
+      position: relative;
+
+      .bg {
+        position: absolute;
+        width: calc(100% + 24px);
+        height: calc(100% + 19px);
+        top: -7px;
+        left: -13px;
+      }
+
+      .social,
+      .counter {
+        position: relative;
+      }
+    }
+    .item4 .item-content {
+      background-image: linear-gradient(to bottom, #007EBB 0%, #007E9D 100%);
+    }
+    .item5 .item-content {
+      background-image: linear-gradient(to bottom, #CE1312 0%, #B01312 100%);
+    }
+    .item6 .item-content {
+      background-image: linear-gradient(to bottom, #FFFE00 0%, #F3F200 98.63%);
+
+      .social {
+        .Snapchat {
+          transform: rotate(180deg);
+
+          > use {
+            fill: #000;
+          }
+        }
+      }
+
+      .number .icon {
+        fill: #000;
+      }
+
+      .text .icon {
+        fill: #000;
+      }
+    }
+    .item7 .item-content {
+      background-image: linear-gradient(to bottom, #F93F2D 0%, #C73F2D 100%);
+    }
+    .item8 .item-content {
+      background-image: linear-gradient(to bottom, #00B687 0%, #008E87 100%);
+    }
+  }
+}

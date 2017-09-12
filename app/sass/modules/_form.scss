@@ -1,0 +1,76 @@
+.mfp-container {
+  display: flex;
+}
+
+.mfp-content {
+  margin-top: 116px;
+}
+
+.mfp-bg {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 22px 26px 28px;
+
+  p {
+    color: #4F4F4F;
+  }
+
+  .title {
+    @include fontSize(18px);
+    font-weight: 700;
+  }
+
+  .description {
+    @include fontSize(14px);
+    padding-top: 32px;
+  }
+
+  .url {
+    @include fontSize(13px);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 19px;
+    padding-bottom: 8px;
+  }
+
+  input {
+    min-height: 40px;
+    border-radius: 5px;
+    border: 1px solid #C5CFC9;
+    padding: 5px 15px;
+    outline: none;
+    color: #B6B6B6;
+  }
+
+  input[type=text] {
+    width: 100%;
+  }
+
+  input[type=submit] {
+    align-self: flex-end;
+    width: 117px;
+    min-height: 40px;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom, #53CD72 0%, #1CAF5E 100%);
+    color: #fff;
+    @include fontSize(14px);
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover {
+      box-shadow: 0 0 10px #000;
+    }
+  }
+}

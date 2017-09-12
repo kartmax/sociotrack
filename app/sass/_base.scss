@@ -1,0 +1,110 @@
+@import "bourbon";
+@import "vars";
+
+
+html {
+	font-size: 16px;
+	background-color: #E5E5E5;
+}
+
+body {
+	@extend .max-width;
+	min-width: 270px;
+	position: relative;
+	font-family: $default-font;
+	overflow-x: hidden;
+}
+
+.max-width {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+main {
+	display: flex;
+	flex-flow: wrap;
+	align-items: stretch;
+}
+
+.minus {
+	.icon {
+		transform: rotate(180deg);
+	}
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 154px;
+	min-height: 40px;
+	padding: 5px;
+	border: 1px solid $main-color;
+	border-radius: 5px;
+	color: $main-color;
+	@include fontSize(14px);
+	outline: none;
+	transition: 0.1s;
+
+	&:hover {
+		background-color: $main-color;
+		color: #fff;
+	}
+
+}
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+
+
+*::-webkit-input-placeholder {
+	color: #B6B6B6;
+	opacity: 1;
+}
+
+*:-moz-placeholder {
+	color: #B6B6B6;
+	opacity: 1;
+}
+
+*::-moz-placeholder {
+	color: #B6B6B6;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #B6B6B6;
+	opacity: 1;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
